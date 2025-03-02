@@ -2,24 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIApplicationSceneManifest</key>
-	<dict>
-		<key>UIApplicationSupportsMultipleScenes</key>
-		<false/>
-		<key>UISceneConfigurations</key>
-		<dict>
-			<key>UIWindowSceneSessionRoleApplication</key>
-			<array>
-				<dict>
-					<key>UISceneConfigurationName</key>
-					<string>Default Configuration</string>
-					<key>UISceneDelegateClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
-					<key>UISceneStoryboardFile</key>
-					<string>Main</string>
-				</dict>
-			</array>
-		</dict>
-	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>OutfitRegular.ttf</string>
+		<string>OutfitBold.ttf</string>
+		<string>OutfitMedium.ttf</string>
+		<string>New-Spirit-Light.otf</string>
+		<string>New-Spirit-Medium.otf</string>
+		<string>New-Spirit-Bold.otf</string>
+		<string>New-Spirit.otf</string>
+	</array>
 </dict>
 </plist>
