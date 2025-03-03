@@ -84,12 +84,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ihh-3f-30c" customClass="TopNavigationBarView" customModule="EntrePatasVet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="aMa-fB-HVh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VCU-PL-hMU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ihh-3f-30c" firstAttribute="leading" secondItem="VCU-PL-hMU" secondAttribute="leading" id="Gho-8w-JDU"/>
                             <constraint firstItem="ipe-AC-4Kj" firstAttribute="centerX" secondItem="SvM-dx-Hbm" secondAttribute="centerX" id="T94-R8-tQb"/>
                             <constraint firstItem="ipe-AC-4Kj" firstAttribute="centerY" secondItem="SvM-dx-Hbm" secondAttribute="centerY" id="TkZ-8G-vIw"/>
+                            <constraint firstItem="VCU-PL-hMU" firstAttribute="trailing" secondItem="ihh-3f-30c" secondAttribute="trailing" id="b9r-uX-EeS"/>
+                            <constraint firstItem="ihh-3f-30c" firstAttribute="top" secondItem="VCU-PL-hMU" secondAttribute="top" id="eVq-fw-7gY"/>
                         </constraints>
                     </view>
                 </viewController>

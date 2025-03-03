@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopNavigationBarView" customModule="EntrePatasVet" customModuleProvider="target">
+            <connections>
+                <outlet property="alertButton" destination="Y6y-xB-0qw" id="jgy-QW-gJd"/>
+                <outlet property="messageButton" destination="EH8-Om-2hN" id="fiR-iP-x4V"/>
+                <outlet property="topBarLabel" destination="JQ5-mT-lX0" id="Qb4-Sb-5Dg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-Id-hz9">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Anton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQ5-mT-lX0">
+                            <rect key="frame" x="0.0" y="0.0" width="93" height="56"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAh-Jy-a8j">
+                            <rect key="frame" x="93" y="0.0" width="147" height="56"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-AO-Nxc">
+                            <rect key="frame" x="240" y="0.0" width="153" height="56"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH8-Om-2hN">
+                                    <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="56"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="bubble.fill" catalog="system"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6y-xB-0qw">
+                                    <rect key="frame" x="76.666666666666686" y="0.0" width="76.333333333333314" height="56"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="sJJ-FK-fwj"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="cuX-Id-hz9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UfL-Cy-uwO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cuX-Id-hz9" secondAttribute="trailing" id="ZqW-9d-8cp"/>
+                <constraint firstItem="cuX-Id-hz9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tIB-vM-caf"/>
+                <constraint firstItem="cuX-Id-hz9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uAd-Jm-uxY"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="66" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bell.fill" catalog="system" width="123" height="128"/>
+        <image name="bubble.fill" catalog="system" width="128" height="110"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
