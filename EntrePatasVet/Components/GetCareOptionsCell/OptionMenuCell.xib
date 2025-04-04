@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OptionMenuCell" customModule="EntrePatasVet" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="iN0-l3-epB" id="0cu-4A-9wq"/>
+                <outlet property="descriptionLabel" destination="0P3-6Y-nfA" id="rdn-HA-ZgT"/>
+                <outlet property="imageIconView" destination="OWM-xv-s6q" id="bg2-w5-d6c"/>
+                <outlet property="titleLabel" destination="VAn-JG-afp" id="pFn-CO-Jti"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="256" height="128"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YuV-pK-Ljb">
+                    <rect key="frame" x="16" y="16" width="224" height="96"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2w-nn-ONG">
+                            <rect key="frame" x="0.0" y="0.0" width="224" height="32"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OWM-xv-s6q">
+                                    <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="VbP-Nz-NQl"/>
+                                        <constraint firstAttribute="width" constant="32" id="iyq-In-ejl"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSw-27-y7U">
+                                    <rect key="frame" x="32" y="0.0" width="192" height="32"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mwb-5D-IdC">
+                            <rect key="frame" x="0.0" y="48" width="224" height="48"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAn-JG-afp">
+                                    <rect key="frame" x="0.0" y="0.0" width="224" height="27.666666666666668"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0P3-6Y-nfA">
+                                    <rect key="frame" x="0.0" y="27.666666666666671" width="224" height="20.333333333333329"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="timberwolf"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YuV-pK-Ljb" secondAttribute="bottom" constant="16" id="7Hh-lG-L1Y"/>
+                <constraint firstAttribute="trailing" secondItem="YuV-pK-Ljb" secondAttribute="trailing" constant="16" id="DNW-sb-h2h"/>
+                <constraint firstItem="YuV-pK-Ljb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="Et1-O7-QIC"/>
+                <constraint firstItem="YuV-pK-Ljb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="bFV-1c-KEi"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="94.656488549618317" y="-137.67605633802819"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="timberwolf">
+            <color red="0.94901960784313721" green="0.91764705882352937" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

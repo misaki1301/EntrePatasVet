@@ -4,13 +4,19 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="New-Spirit-Medium.otf">
+            <string>NewSpirit-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopNavigationBarView" customModule="EntrePatasVet" customModuleProvider="target">
             <connections>
                 <outlet property="alertButton" destination="Y6y-xB-0qw" id="jgy-QW-gJd"/>
+                <outlet property="backButton" destination="1CZ-5I-F1f" id="aWx-Qa-14F"/>
+                <outlet property="containerView" destination="iN0-l3-epB" id="to6-sW-FQv"/>
                 <outlet property="messageButton" destination="EH8-Om-2hN" id="fiR-iP-x4V"/>
                 <outlet property="topBarLabel" destination="JQ5-mT-lX0" id="Qb4-Sb-5Dg"/>
             </connections>
@@ -21,30 +27,40 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuX-Id-hz9">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
+                    <rect key="frame" x="16" y="0.0" width="361" height="56"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CZ-5I-F1f">
+                            <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="56"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system">
+                                <color key="baseForegroundColor" name="timberwolf"/>
+                            </buttonConfiguration>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, Anton" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQ5-mT-lX0">
-                            <rect key="frame" x="0.0" y="0.0" width="93" height="56"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="49.333333333333321" y="0.0" width="102.66666666666669" height="56"/>
+                            <fontDescription key="fontDescription" name="NewSpirit-Medium" family="New Spirit" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAh-Jy-a8j">
-                            <rect key="frame" x="93" y="0.0" width="147" height="56"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <rect key="frame" x="152" y="0.0" width="85.333333333333314" height="56"/>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-AO-Nxc">
-                            <rect key="frame" x="240" y="0.0" width="153" height="56"/>
+                            <rect key="frame" x="237.33333333333334" y="0.0" width="123.66666666666666" height="56"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EH8-Om-2hN">
-                                    <rect key="frame" x="0.0" y="0.0" width="76.666666666666671" height="56"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="62" height="56"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="bubble.fill" catalog="system"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="bubble.fill" catalog="system">
+                                        <color key="baseForegroundColor" name="middle_mint"/>
+                                    </buttonConfiguration>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6y-xB-0qw">
-                                    <rect key="frame" x="76.666666666666686" y="0.0" width="76.333333333333314" height="56"/>
+                                    <rect key="frame" x="61.999999999999972" y="0.0" width="61.666666666666657" height="56"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="bell.fill" catalog="system">
+                                        <color key="baseForegroundColor" name="middle_mint"/>
+                                    </buttonConfiguration>
                                 </button>
                             </subviews>
                         </stackView>
@@ -55,12 +71,11 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="cuX-Id-hz9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UfL-Cy-uwO"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cuX-Id-hz9" secondAttribute="trailing" id="ZqW-9d-8cp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cuX-Id-hz9" secondAttribute="trailing" constant="16" id="ZqW-9d-8cp"/>
                 <constraint firstItem="cuX-Id-hz9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tIB-vM-caf"/>
-                <constraint firstItem="cuX-Id-hz9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="uAd-Jm-uxY"/>
+                <constraint firstItem="cuX-Id-hz9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="uAd-Jm-uxY"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -69,10 +84,14 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
         <image name="bubble.fill" catalog="system" width="128" height="110"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="middle_mint">
+            <color red="0.49803921568627452" green="0.81960784313725488" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="timberwolf">
+            <color red="0.94901960784313721" green="0.91764705882352937" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

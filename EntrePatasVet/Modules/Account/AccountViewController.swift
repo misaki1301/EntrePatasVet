@@ -1,23 +1,18 @@
 //
-//  HomeViewController.swift
+//  AccountViewController.swift
 //  EntrePatasVet
 //
-//  Created by Paul Pacheco on 2/03/25.
+//  Created by Paul Frank on 6/03/25.
 //
 
 import UIKit
 
-class HomeViewController: UIViewController {
-	
-	var coordinator: TabNavigationCoordinator?
+class AccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-		//let view = TopNavigationBarView.instantiate(message: "pac")
-		self.navigationController?.isNavigationBarHidden = true
-		print(coordinator?.childCoordinators.count)
     }
     
 

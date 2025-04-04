@@ -53,26 +53,62 @@ class MainCoordinator: Coordinator {
 	var navigationController: UINavigationController
 	weak var parentCoordinator: AppCoordinator?
 	
-	init(navigationController: UINavigationController, parentCoordinator: AppCoordinator? = nil) {
+	init(
+		navigationController: UINavigationController,
+		parentCoordinator: AppCoordinator? = nil) {
 		self.navigationController = navigationController
 		self.parentCoordinator = parentCoordinator
 	}
 	
 	func start() {
-		guard let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OnboardingViewController") as? OnboardingViewController else {
+		guard let homeVC = UIStoryboard(name: "Main", bundle: nil)
+			.instantiateViewController(withIdentifier: "OnboardingViewController")
+				as? OnboardingViewController else {
 			return
 		}
-		print("SEXO")
 		homeVC.coordinator = self
 		navigationController.pushViewController(homeVC, animated: true)
 	}
 	
 	func showHome() {
-		let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+		//let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+		let homeCoordinator = TabNavigationCoordinator()
 		childCoordinators.append(homeCoordinator)
-		homeCoordinator.parentCoordiantor = self
+		homeCoordinator.parentCoordinator = self
+		// Set the TabBarController as the root of the window
 		homeCoordinator.start()
+		if let window = UIApplication.shared.windows.first {
+			window.rootViewController = homeCoordinator.tabController
+			window.makeKeyAndVisible()
+		}
+		
 	}
+}
+
+class GetCareCoordinator: Coordinator {
+	var childCoordinators: [any Coordinator]
+
+	var navigationController: UINavigationController
+	
+	init(
+		childCoordinators: [any Coordinator],
+		navigationController: UINavigationController
+	) {
+		self.childCoordinators = childCoordinators
+		self.navigationController = navigationController
+	}
+
+	func start() {
+		guard let getCareVC = UIStoryboard(name: "Main", bundle: nil)
+			.instantiateViewController(
+				withIdentifier: "GetCareViewController"
+			) as? GetCareViewController
+		else { return }
+		
+		navigationController.viewControllers = [getCareVC]
+	}
+
+	
 }
 
 class HomeCoordinator: Coordinator {
@@ -80,17 +116,18 @@ class HomeCoordinator: Coordinator {
 	var navigationController: UINavigationController
 	weak var parentCoordiantor: Coordinator?
 	
-	init(navigationController: UINavigationController, parentCoordiantor: AppCoordinator? = nil) {
+	init(
+		navigationController: UINavigationController,
+		parentCoordiantor: AppCoordinator? = nil) {
 		self.navigationController = navigationController
 		self.parentCoordiantor = parentCoordiantor
 	}
 	
 	func start() {
-		guard let homeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {
-			return
-		}
+		guard let homeVC = UIStoryboard(name: "Main", bundle: nil)
+			.instantiateViewController(withIdentifier: "HomeViewController")
+				as? HomeViewController else { return }
 		print("Home")
-		homeVC.coordinator = self
 		navigationController.viewControllers = [homeVC]
 	}
 }
